@@ -1,0 +1,51 @@
+{
+	"name": "chunk-by",
+	"version": "0.0.1",
+	"description": "chunk array by some condition",
+	"license": "MIT",
+	"repository": "lucamattiazzi/chunk-by",
+	"author": {
+		"name": "Luca Mattiazzi",
+		"email": "l.d.mattiazzi@gmail.com",
+		"url": "https://grokked.it"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "jest",
+		"build": "tsc"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist/"
+	],
+	"types": "dist/index.d.ts",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/jest": "^25.1.4",
+		"ava": "^2.1.0",
+		"husky": "^4.2.3",
+		"jest": "^25.2.4",
+		"ts-jest": "^25.3.0",
+		"ts-node": "^8.8.1",
+		"typescript": "^3.8.3",
+		"xo": "^0.24.0"
+	},
+	"husky": {
+    "hooks": {
+      "pre-commit": "yarn build",
+      "pre-push": "yarn test"
+    }
+  },
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "./tests/.*\\.test\\.ts$",
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		]
+	}
+}

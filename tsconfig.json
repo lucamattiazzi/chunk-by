@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "types": ["node", "jest"],
+    "strict": true,
+    "declaration": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "es7", "es2017", "dom"],
+    "pretty": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": false,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true
+  },
+  "include": ["index.ts"]
+}
