@@ -1,6 +1,6 @@
 {
 	"name": "chunkier",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "chunk array by some condition",
 	"license": "MIT",
 	"repository": "lucamattiazzi/chunk-by",
@@ -33,11 +33,11 @@
 		"xo": "^0.24.0"
 	},
 	"husky": {
-    "hooks": {
-      "pre-commit": "yarn build",
-      "pre-push": "yarn test"
-    }
-  },
+		"hooks": {
+			"pre-commit": "yarn build",
+			"pre-push": "yarn test"
+		}
+	},
 	"jest": {
 		"transform": {
 			"^.+\\.tsx?$": "ts-jest"

@@ -21,13 +21,15 @@ function push<T = any>(array: T[], item: T): T[] {
   return array
 }
 
+export function chunkBy<T = any>(array: T[], condition: number): T[][]
+export function chunkBy<T = any>(array: T[], condition: ConditionFn<T>): T[][]
 export function chunkBy<T = any>(array: T[], condition: Condition<T>): T[][] {
   if (array === undefined) throw new Error('Missing array')
   if (condition === undefined) throw new Error('Missing condition')
   if (!array.length) return []
   if (conditionIsNumber(condition)) {
     const lengthCondition = buildSmallerThan<T>(condition)
-    return chunkBy(array, lengthCondition)
+    return chunkBy<T>(array, lengthCondition)
   }
   const chunks = array.reduce<T[][]>((acc, item, idx) => {
     const lastChunk = getLast<T[]>(acc)
